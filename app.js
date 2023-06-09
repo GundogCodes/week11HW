@@ -5,6 +5,6 @@ const app = express()
 
 app.use(express.json())
 app.use(morgan('combined'))
-app.use('/users', userRoutes)
+app.use('/users', userRoutes) // sets the 'home' of the app
 
 module.exports = app

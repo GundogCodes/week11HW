@@ -1,8 +1,13 @@
 const ToDo = require('../models/todo')
 
+exports.home = (req,res) =>{
+    
+    res.send('<h1>Hello World</h1>')
+}
+
 exports.createItem = async (req,res) =>{
     try {
-        const createdTodo = new ToDo.create(req.body)
+        const createdTodo = new ToDo(req.body)
         await createdTodo.save()
         res.send({createdTodo})
 
@@ -32,9 +37,8 @@ exports.getItem = async (req,res) =>{
 exports.updateItem = async (req,res)=>{
     try {
         const findItem = await ToDo.findByIdAndUpdate({'_id':req.params.id}, req.body,{new:true})
-        .then(()=>{
-            res.redirect('/todos')
-        })
+        res.json({findItem})
+        
     } catch (error) {
         res.json({message: error.message})
     }
