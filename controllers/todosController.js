@@ -20,6 +20,7 @@ exports.getAllItems = async (req,res) =>{
     try {
         const allItems = await ToDo.find({})
         res.json(allItems)
+    
     } catch (error) {
         res.json({message: error.message})
     }
@@ -46,8 +47,13 @@ exports.updateItem = async (req,res)=>{
 
 exports.deleteItem = async (req,res)=>{
     try {
-        await ToDo.findOneAndDelete({'_id':req.params.id})
-        res.send(`Item Deleted`)
+        const foundToDo =  await ToDo.findOneAndDelete({'_id':req.params.id})
+        if(!foundToDo){
+            res.send('Item Not Found')
+        } else{
+
+            res.send(`${foundToDo.title} Deleted`)
+        }
     } catch (error) {
         res.json({message: error.message})
     }
