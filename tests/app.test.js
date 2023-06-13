@@ -17,16 +17,10 @@ afterAll(async () => {
     server.close()
   })
 
-afterAll((done) => done())
+
 
 describe('Test all user endpoints', ()=>{
-    test('test homepage response', async ()=>{
-        const response  = await request(app)
-        .get('/users')
-        expect(response.statusCode).toBe(200)
-        expect(response.text).toBe('<h1>Hello World</h1>')
-        
-    })
+    
     test('create a new todo', async ()=>{
         const response = await request(app)
         .post('/users/todos')

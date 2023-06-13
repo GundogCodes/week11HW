@@ -1,0 +1,65 @@
+1.What is Express in Node.js and why is it used?
+    Node is an open source server enviroment package that allows you to excecute JS 
+    outside the browser.Express is backend web framework package that allows you to 
+    control the node.js server enviroment with functions and methods to set/control
+    a server in congruence with other node packages. You can define routes of the 
+    server, process HTTP requests, create views for webpages.
+
+2.How does Mongoose help in using MongoDB with Node.js?
+    Mongoose is an Node package that allows you to control/create a database with 
+    MongoDB, where you can send and retrive info/data from using its own methods
+    and abilites. 
+3.Can you explain the role of Mongoose in managing relationships between data?
+    Mongoose is a library probably of a class with its own methods that when you 
+    import into your project can allow you to run those methods (functions) on your 
+    code/data. Mongoose allows you to connect to MongoDB and it's servers and create
+    databases which you can read or write info/data.
+
+4.What is a software design pattern? Give an example.
+    Software Design Pattern is the process by which you organize and create a software
+    application. An example is the Models Views and Controllers design patter we have
+    been using in our projects. 
+
+5.Can you explain the MVC architecture in detail?
+    This design pattern seperates each of the functionalites
+    into different folders. The Models folder contains the schema for the data that we 
+    will use throughout the code. The Views folder holds the templates for the visuals
+    that the clients can see on their device, and the Controllers define how the clients'
+    HTTP requests are handled and how the views and models may or may not be impacted.
+
+6.What roles do Model, View, and Controller play in the MVC architecture?
+    The Models folder contains the schema for the data that we will use throughout the 
+    code.The Views folder holds the templates for the visuals that the clients can see on 
+    their device, and the Controllers define how the clients' HTTP requests are handled 
+    and how the views and models may or may not be impacted.
+
+7.Define Latency and Throughput in the context of APIs.
+    Latency refers to the response time between when a query is entered and when the res
+    -ponse was delivered to the client. Throughput refers to the rate at which the requests
+    to the API is processed.
+
+8.Why is it important to minimize latency and maximize throughput in APIs?
+    To have our API be useful in a timely and efficient manner such that it will actually be
+    valuable to the user. 
+
+9.What is Authentication in terms of web development?
+    Authentication in terms of web development lets us decern and verify that the user that the 
+    requesting from our API is allowed to do so. We use the JWT package along with the schema of 
+    our data to be able to create a web token that allows us to verify that the user i.
+    
+10.How does the authorization process start?
+11.What is express.static used for in Express?
+12.Can you give an example of serving static files using express.static?
+13.What is Jest and why is it used?
+14.How can Supertest be helpful when working with Jest?
+15.Can you describe how manual and automated tests are executed?
+16.What is the difference between unit testing, integration testing, and end-to-end testing?
+17.Can you provide examples of functional, regression, smoke, and performance tests?
+18.What is meant by positive testing and negative testing in a functional testing context?
+19.How does load testing assess the behavior of software?
+20.What aspects does usability testing assess in a software application?
+21.Why is security testing crucial in a software development life cycle?
+22.Can you explain what compatibility testing is?
+23.What is the aim of recovery testing and why is it important?
+24.What is User Acceptance Testing (UAT) and who typically performs it?
+25.Can you describe a scenario in which you would use each of the different testing types mentioned in the notes?

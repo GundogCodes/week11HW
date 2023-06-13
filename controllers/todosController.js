@@ -1,15 +1,11 @@
 const ToDo = require('../models/todo')
 
-exports.home = (req,res) =>{
-    
-    res.send('<h1>Hello World</h1>')
-}
 
 exports.createItem = async (req,res) =>{
     try {
         const createdTodo = new ToDo(req.body)
         await createdTodo.save()
-        res.send({createdTodo})
+        res.json({createdTodo})
 
     } catch (error) {
         res.json({message: error.message})
@@ -28,8 +24,14 @@ exports.getAllItems = async (req,res) =>{
 
 exports.getItem = async (req,res) =>{
     try {
+
         const foundItem = await ToDo.findOne({'_id':req.params.id})
-        res.json(foundItem)
+        if(!foundItem) {
+            res.send('Todo does not exist')
+        }else{
+
+            res.json(foundItem)
+        }
     } catch (error) {
         res.json({message: error.message})
     }
