@@ -45,21 +45,51 @@
 9.What is Authentication in terms of web development?
     Authentication in terms of web development lets us decern and verify that the user that the 
     requesting from our API is allowed to do so. We use the JWT package along with the schema of 
-    our data to be able to create a web token that allows us to verify that the user i.
-    
+    our data to be able to create a web token that allows us to verify that the user. 
+
 10.How does the authorization process start?
+    The Authentication process, on the backend, starts in the models section of the project. Where
+    we use bcrypt and json web token to encrypt and verify user data. When a user is created, their 
+    info their password is hashed and a token is created and everytime the user logins in their entered
+    hashed password is compared with the one in the the database and verified and the token is verified 
+    when the user wants to delete the account. 
+
 11.What is express.static used for in Express?
+    express.static is used to deliver static (non-dynamic ie. unchanging files) to the client. You can 
+    create a public directory that hold folders containing static files and with the app.use(express.st
+    -atic('/pathwayToStaticFile'))
+
 12.Can you give an example of serving static files using express.static?
+    Something like a word document or a css file would be an example.
+
 13.What is Jest and why is it used?
+    Jest is a package in node that you can use to be able to test your code to make sure it works properly
+    in the way you want it to. You must add a app.test.js file in your project and use the functions and methods
+    that the package comes with to perform tests on your code. Functions such as describe to describe what you will
+    be testing in this code block, test where you will actually run the test, and methods such as expect and toBe to
+    verify your desired output.
+
 14.How can Supertest be helpful when working with Jest?
+    Supertest allows you to make HTTP requests and test the functionality of your API.
+
 15.Can you describe how manual and automated tests are executed?
+    
 16.What is the difference between unit testing, integration testing, and end-to-end testing?
+
 17.Can you provide examples of functional, regression, smoke, and performance tests?
+
 18.What is meant by positive testing and negative testing in a functional testing context?
+
 19.How does load testing assess the behavior of software?
+
 20.What aspects does usability testing assess in a software application?
+
 21.Why is security testing crucial in a software development life cycle?
+
 22.Can you explain what compatibility testing is?
+
 23.What is the aim of recovery testing and why is it important?
+
 24.What is User Acceptance Testing (UAT) and who typically performs it?
+
 25.Can you describe a scenario in which you would use each of the different testing types mentioned in the notes?
