@@ -39,7 +39,7 @@ exports.getItem = async (req,res) =>{
 
 exports.updateItem = async (req,res)=>{
     try {
-        const findItem = await ToDo.findByIdAndUpdate({'_id':req.params.id}, req.body,{new:true})
+        const findItem = await ToDo.findByIdAndUpdate({'_id':req.params.id}, req.body, {new:true})
         if(!findItem){
             res.send('Item not found')
         }else{

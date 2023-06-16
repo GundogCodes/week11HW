@@ -73,17 +73,27 @@
     Supertest allows you to make HTTP requests and test the functionality of your API.
 
 15.Can you describe how manual and automated tests are executed?
-    
+    Manual tests are you going out of your way and running each part of the code to make sure its running the way you
+    want. Automated tests such as tests with jest, supertest, and artillery allows you to automate and expedite this 
+    process by using methods and abilities within those packages to acheive this goal.
+
 16.What is the difference between unit testing, integration testing, and end-to-end testing?
+    Unit testing is taking a single block of code, like a function, and testing it to make sure it works the way we
+    want. Integration testing is testing the different blocks of code together and making sure they run properly with
+    each other. End-to-end testing is testing the whole program to make sure it has the least amounts of bugs possible.
 
 17.Can you provide examples of functional, regression, smoke, and performance tests?
 
 18.What is meant by positive testing and negative testing in a functional testing context?
+    Positive testing is testing for the outcomes of your code when they work the way you want. Negative testing is handling
+    accounting for when errors pop up in the code and testing if the error is handled correctly.
 
 19.How does load testing assess the behavior of software?
+    Load testing tests the performance of software with respect to the volume of requests or operations being handled or made
+    in the software and if it is able to or not.
 
 20.What aspects does usability testing assess in a software application?
-
+    
 21.Why is security testing crucial in a software development life cycle?
 
 22.Can you explain what compatibility testing is?

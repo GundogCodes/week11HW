@@ -4,7 +4,6 @@
 
 function lengthOfString(str, len = 0) {
     // If the length is 0 (base case), return len (0).
-    
     // if (str.length === 0) return len;
     if (!str.length) return len;
   
@@ -15,14 +14,39 @@ function lengthOfString(str, len = 0) {
     return lengthOfString(restOfString, ++len);
   }
   
-  function sumOfArray() {
+  function sumOfArray(arr, sum =0 ,count = 0) {
     // This function returns the sum of all of the numbers in a given array.
+   
+    if(count>=arr.length){
+      return 
+    } else {
+      sum = sum + arr[count]
+      count++
+      console.log(sum)
+      sumOfArray(arr, sum, count++)
+    }
   }
+sumOfArray([1,2,3,4,5,6,7])
   
-  function findMax() {
+  function findMax(arr,largestNum = 0, index=0) {
     // This function returns the largest number in a given array.
+    if(index === arr.length){
+      return 
+    } else{
+      if(arr[index]> largestNum){
+        largestNum = arr[index]
+      }
+      console.log('largest number is: ', largestNum)
+      console.log('Index is: ', index)
+      index++
+      findMax(arr,largestNum,index)
+    }
+
+    return largestNum 
   }
   
+findMax([3,4,1,5,66,2])
+
   function factorial() {
     // This function returns the factorial of a given number.
   }
@@ -30,18 +54,22 @@ function lengthOfString(str, len = 0) {
   function fibonacci() {
     // This function returns the Nth number in the fibonacci sequence.
     // https://en.wikipedia.org/wiki/Fibonacci_number
-    // For this function, the first two fibonacci numbers are 1 and 1
+    // For this function, the first two fibonacci numbers are 1 and 1\
+
   }
   
-  function coinFlips() {
+  function coinFlips(N) {
     // This function returns an array of all possible outcomes from flipping a coin N times.
     // Input type: Integer
     // For example, coinFlips(2) would return the following:
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"
+
+
   }
   
+
   function letterCombinations() {
     // This function returns an array of all combinations of the given letters
     // Input type: Array of single characters
