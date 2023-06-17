@@ -55,20 +55,18 @@ sumOfArray([1,2,3,4,5,6,7])
   
 findMax([3,4,1,5,66,2])
 
-  function factorial(N,f=0,count=0) {
+  function factorial(N) {
   
     // This function returns the factorial of a given number.
     if(N===0){
-      return 
-    }else{
-      f = N*(N-1) //f =20
-      count = count + f //count = 20
-      console.log('count is', count)
-      factorial(N-1,f,count)
-    }
+      return 1
+    } else {
+      return N*factorial(N-1)
+  }
   }
 
-factorial(5)
+const fact = factorial(100)
+console.log(fact)
 
   function fibonacci(N) {
     // This function returns the Nth number in the fibonacci sequence.
@@ -138,8 +136,8 @@ factorial(5)
     lengthOfString, //done
     sumOfArray,// done
     findMax, //done 
-    factorial,
-    fibonacci,
+    factorial,// done
+    fibonacci,//done
     coinFlips,
     letterCombinations,
   };
