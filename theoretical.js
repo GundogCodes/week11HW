@@ -70,12 +70,26 @@ findMax([3,4,1,5,66,2])
 
 factorial(5)
 
-  function fibonacci() {
+  function fibonacci(N) {
     // This function returns the Nth number in the fibonacci sequence.
     // https://en.wikipedia.org/wiki/Fibonacci_number
-    // For this function, the first two fibonacci numbers are 1 and 1\
-
+    // For this function, the first two fibonacci numbers are 1 and 1
+    let start = 1
+    if(N<=0){
+      return 'Not Allowed'
+    }else if(N===1){
+      return 0
+    } else if (N===2){
+      return 1
+    } else if (N===3){
+      return 2
+    }else{
+      let fib = fibonacci(N-1) + fibonacci(N-2)
+      return fib
+    }
   }
+
+  console.log(`The fibonacci is, ${fibonacci(4)}`)
   
   function coinFlips(N) {
     // This function returns an array of all possible outcomes from flipping a coin N times.
@@ -117,11 +131,6 @@ factorial(5)
     // Input type: Array of single characters
     // For example, letterCombinations(["a","b","c"]) would return the following:
     // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
-    if(){
-
-    }else{
-      
-    }
 
   }
   
