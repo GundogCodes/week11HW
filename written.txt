@@ -83,6 +83,11 @@
     each other. End-to-end testing is testing the whole program to make sure it has the least amounts of bugs possible.
 
 17.Can you provide examples of functional, regression, smoke, and performance tests?
+    Functional tests are verifying that the software is functioning as intended, examples include manual testing to veriify
+    the usability of the software. Regression testing is verifying that additional or new pieces of code do not break or add 
+    bugs to our program, example would be integration testing. Smoke tests aim to idenify the basic functionalities of the program
+    and making sure there is no bugs there example would be unit tests. Performance testing would test how well the program can run
+    based off different loads, artillery is an example of this. 
 
 18.What is meant by positive testing and negative testing in a functional testing context?
     Positive testing is testing for the outcomes of your code when they work the way you want. Negative testing is handling
@@ -93,13 +98,25 @@
     in the software and if it is able to or not.
 
 20.What aspects does usability testing assess in a software application?
-    
+    Learnability, how easy is it for users to understand and use the app. Efficiency, how quickly and usefully can the app complete
+    its tasks. Navigation, can users navigate and use the app easily. 
+
 21.Why is security testing crucial in a software development life cycle?
+    To ensure that the privacy and important data of both the user and devloper or organization is not compromised.
 
 22.Can you explain what compatibility testing is?
-
+    Compatibility testing has the goal of making sure that your app is compatible with many different environments and functions as
+    we would like it too. These different environments include different browsers, different operating systems, different hardwares
+    and etc. 
 23.What is the aim of recovery testing and why is it important?
+    Recovery testing aims to assess how well an app recovers from errors or failures. It involves intentionally causing failures or 
+    abnormal conditions to test the program and how well it can recover. It is important as a failure is always inevitable, thus, it
+    is important to put in failsafes and conditions that are able to recover the app to normal.
 
 24.What is User Acceptance Testing (UAT) and who typically performs it?
+    UAT is is where end-users (customers or business) test the software to ensure it meets their requirements and is ready for deployment.
 
 25.Can you describe a scenario in which you would use each of the different testing types mentioned in the notes?
+    To make sure all my functions are working as intended and returning the things they are supposed to I would use Jest to verify this. To
+    verify that the proper HTTP requests with the wanted req,res are happening I would use Supertest to verify this. To Test that my application
+    can handle the amount of traffic I should anticipate, doing Artillery load testing is paramount.
